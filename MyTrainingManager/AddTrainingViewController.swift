@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTrainingViewController: UIViewController {
+class AddTrainingViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var programNameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
@@ -20,6 +20,12 @@ class AddTrainingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         programNameTextField.delegate = self
+        dateTextField.delegate = self
+        VenueTextField.delegate = self
+        timeTextField.delegate = self
+        trainerNameTextField.delegate = self
+        categoryTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -30,6 +36,51 @@ class AddTrainingViewController: UIViewController {
     }
     
     @IBAction func addTrainingButtonClicked(_ sender: Any) {
+//        let addTrainingDetails = MyTrainingListClass()
+//        if let programeName = programNameTextField.text, let dateOfTraining = dateTextField.text, let venueDetails = VenueTextField.text , let timeDetails = timeTextField.text , let trainerDetails = trainerNameTextField.text,let categoryDetail = categoryTextField.text
+//                {
+//            addTrainingDetails.programName = programeName
+//            addTrainingDetails.date = dateOfTraining
+//            addTrainingDetails.venue = venueDetails
+//            addTrainingDetails.time = timeDetails
+//            addTrainingDetails.trainerName = trainerDetails
+//            addTrainingDetails.category = categoryDetail
+//
+//        }
+    
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        
+        let addTrainingDetails = MyTrainingList(entity: MyTrainingList.entity(), insertInto: context)
+    
+            if let programeName = programNameTextField.text, let dateOfTraining = dateTextField.text, let venueDetails = VenueTextField.text , let timeDetails = timeTextField.text , let trainerDetails = trainerNameTextField.text,let categoryDetail = categoryTextField.text
+            {
+                addTrainingDetails.programName = programeName
+                addTrainingDetails.date = dateOfTraining
+                addTrainingDetails.venue = venueDetails
+                addTrainingDetails.time = timeDetails
+                addTrainingDetails.trainerName = trainerDetails
+                addTrainingDetails.category = categoryDetail
+            }
+            do {
+                try context.save()
+                navigationController?.popViewController(animated: true)
+            } catch {
+                print("Failed saving")
+            }
+            
+        }
+    
+    
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
     }
     
     /*
