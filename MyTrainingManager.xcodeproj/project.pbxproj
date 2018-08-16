@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C52A026B210D95890072EFB4 /* AddTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A026A210D95890072EFB4 /* AddTrainingViewController.swift */; };
 		C52A026F210DFBF30072EFB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A026E210DFBF30072EFB4 /* CollectionViewCell.swift */; };
+		C52E6ED32110BF6C00BBA0F3 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E6ED22110BF6A00BBA0F3 /* DatePickerViewController.swift */; };
+		C542CAF72111FFE20009443A /* TrainingDataSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542CAF62111FFE20009443A /* TrainingDataSingleton.swift */; };
+		C55387FB2114AB6000662B6C /* DateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55387FA2114AB6000662B6C /* DateProtocol.swift */; };
 		C5979DE72100F6FA00A104DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5979DE62100F6FA00A104DE /* AppDelegate.swift */; };
 		C5979DE92100F6FB00A104DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5979DE82100F6FB00A104DE /* ViewController.swift */; };
 		C5979DEC2100F6FC00A104DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5979DEA2100F6FC00A104DE /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		C52A026A210D95890072EFB4 /* AddTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingViewController.swift; sourceTree = "<group>"; };
 		C52A026E210DFBF30072EFB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C52E6ED22110BF6A00BBA0F3 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		C542CAF62111FFE20009443A /* TrainingDataSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSingleton.swift; sourceTree = "<group>"; };
+		C55387FA2114AB6000662B6C /* DateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProtocol.swift; sourceTree = "<group>"; };
 		C5979DE32100F6FA00A104DE /* MyTrainingManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrainingManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5979DE62100F6FA00A104DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5979DE82100F6FB00A104DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				C5B47E25210CBF4900EC4E08 /* AppIconAssets.xcassets */,
 				C52A026A210D95890072EFB4 /* AddTrainingViewController.swift */,
 				C52A026E210DFBF30072EFB4 /* CollectionViewCell.swift */,
+				C52E6ED22110BF6A00BBA0F3 /* DatePickerViewController.swift */,
+				C542CAF62111FFE20009443A /* TrainingDataSingleton.swift */,
+				C55387FA2114AB6000662B6C /* DateProtocol.swift */,
 			);
 			path = MyTrainingManager;
 			sourceTree = "<group>";
@@ -147,8 +156,11 @@
 			files = (
 				C52A026F210DFBF30072EFB4 /* CollectionViewCell.swift in Sources */,
 				C5979DE92100F6FB00A104DE /* ViewController.swift in Sources */,
+				C52E6ED32110BF6C00BBA0F3 /* DatePickerViewController.swift in Sources */,
 				C5979DEF2100F6FD00A104DE /* MyTrainingManager.xcdatamodeld in Sources */,
 				C52A026B210D95890072EFB4 /* AddTrainingViewController.swift in Sources */,
+				C55387FB2114AB6000662B6C /* DateProtocol.swift in Sources */,
+				C542CAF72111FFE20009443A /* TrainingDataSingleton.swift in Sources */,
 				C5979DE72100F6FA00A104DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -274,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -289,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JGLDD9YP28;
 				INFOPLIST_FILE = MyTrainingManager/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SohailUrRahman.MyTrainingManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JGLDD9YP28;
 				INFOPLIST_FILE = MyTrainingManager/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SohailUrRahman.MyTrainingManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
